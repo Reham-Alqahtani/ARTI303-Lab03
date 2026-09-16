@@ -1,0 +1,23 @@
+?- father(ibrahim, reham).
+true.
+
+?- father(saeed, ibrahim).
+true.
+
+?- mother(zahra, ibrahim).
+true.
+
+?- mother(zahra, badr).
+true.
+
+?- sister(reham, ziyad).
+true.
+
+?- sister(raghad, alwaleed).
+true.
+
+?- brother(ziyad, reham).
+true.
+
+?- brother(alwaleed, raghad).
+true.
