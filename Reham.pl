@@ -24,22 +24,14 @@ parent(ibrahim, alwaleed).
 parent(ibrahim, reham).
 parent(ibrahim, raghad).
 
-father(Father, Child) :-
-    male(Father),
-    parent(Father, Child).
 
-mother(Mother, Child) :-
-    female(Mother),
-    parent(Mother, Child).
 
-sister(Sister, Person) :-
-    female(Sister),
-    parent(Parent, Sister),
-    parent(Parent, Person),
-    Sister \= Person.
 
-brother(Brother, Person) :-
-    male(Brother),
-    parent(Parent, Brother),
-    parent(Parent, Person),
-    Brother \= Person.
+father(X, Y) :- male(X), parent(X, Y).
+mother(X, Y) :- female(X), parent(X, Y).
+sister(X, Y) :- female(X), parent(P, X), parent(P, Y), X \= Y.
+brother(X, Y) :- male(X), parent(P, X), parent(P, Y), X \= Y.
+
+
+
+
